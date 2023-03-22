@@ -28,7 +28,7 @@ func TestSingletonLazy(t *testing.T) {
 func TestNamedSingleton(t *testing.T) {
 	gomodular.Reset()
 
-	err := container.NamedSingleton("rounded", func() Shape {
+	err := gomodular.NamedSingleton("rounded", func() Shape {
 		return &Circle{a: 13}
 	})
 	assert.NoError(t, err)
